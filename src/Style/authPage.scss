@@ -1,8 +1,9 @@
-html, body {
-    height: 100%;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .auth-page-container {
@@ -17,12 +18,12 @@ html, body {
   .page-image {
     width: 376px;
     height: 394px;
-      display: flex;
-      justify-content: end;
-      align-items: center;
-      background-color: #ffffffec;
-      border-top-left-radius: 5%;
-      border-bottom-left-radius: 5%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: #ffffffec;
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
     img {
       width: 367px;
       height: 385px;
@@ -50,7 +51,7 @@ html, body {
       font-size: 25px;
       font-weight: 600;
       margin: 0 10px;
-      letter-spacing: .06rem;
+      letter-spacing: 0.06rem;
       transition: all 0.3s ease;
       cursor: pointer;
       color: #757373;

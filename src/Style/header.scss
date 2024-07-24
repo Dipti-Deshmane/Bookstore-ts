@@ -1,115 +1,110 @@
 .header {
-    width: 100vw;
-  }
-  
-  .headercontainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: brown;
-    padding: 10px;
-  }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-    width: 20%;
-    justify-content: end;
-  }
-  
-  .logo {
-    width: 30%;
-  }
-  
-  .logoText {
-    font-size: medium;
-    font-family: sans-serif;
-    margin-left: 10px;
-    color: white;
-  }
-  
-  .search-container {
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-start;
-    width: 41%;
-    margin-left: 2%;
-  }
-  
-  .search-input {
-    width: 57%;
-    padding: 0.7%;
-  }
-  
-  .icons {
-    display: flex;
-    align-items: center;
-    width: 16%;
-    justify-content: space-evenly;
-  }
-  
-  .spacer{
-    width: 10%;
-  }
-.profile{
-
+  width: 100vw;
 }
-  
-  .user-card {
-    position: absolute;
-    top: 8%;
-    right: 21%;
-    width: 13%;
-    height: 25%;
-    background: white;
-    border: 1px solid #ddd;
-    padding: 1%;
-    border-radius: 5px;
-    font-size: small;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    .user-info{
-      margin-top: -7%;
-    }
-  }
-  
-  .user-card .user-info {
-    margin-bottom: 10px;
-    font-size: small;
-  }
-  .optionName{
-    font-size: small;
-    margin-left: 2%;
-  }
-  .user-card .username {
-    font-weight: bold;
-  }
 
-  .cartOptions{
-    display: flex;
-    flex-direction: column;
-    .logoutbtn{
-      border: 1px solid brown;
-      width: 60%;
-      display: flex;
-      /* align-items: center; */
-      justify-content: center;
-    }
-  }
-  
-  .user-card button {
-    display: flex;
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 5px;
-    background: none;
-    border: none;
-    text-align: left;
-    cursor: pointer;
-    color: gray;
-    align-items: center;
-    justify-content: flex-start;
+.headercontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: brown;
+  padding: 10px;
+}
 
-   
+.logo-container {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  justify-content: end;
+}
+
+.logo {
+  width: 30%;
+}
+
+.logoText {
+  font-size: medium;
+  font-family: sans-serif;
+  margin-left: 10px;
+  color: white;
+}
+
+.search-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+  width: 41%;
+  margin-left: 2%;
+}
+
+.search-input {
+  width: 57%;
+  padding: 0.7%;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  width: 16%;
+  justify-content: space-evenly;
+}
+
+.spacer {
+  width: 10%;
+}
+.profile {
+}
+
+.user-card {
+  position: absolute;
+  top: 8%;
+  right: 21%;
+  width: 13%;
+  height: 25%;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 1%;
+  border-radius: 5px;
+  font-size: small;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  .user-info {
+    margin-top: -7%;
   }
-  
-  
+}
+
+.user-card .user-info {
+  margin-bottom: 10px;
+  font-size: small;
+}
+.optionName {
+  font-size: small;
+  margin-left: 2%;
+}
+.user-card .username {
+  font-weight: bold;
+}
+
+.cartOptions {
+  display: flex;
+  flex-direction: column;
+  .logoutbtn {
+    border: 1px solid brown;
+    width: 60%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+  }
+}
+
+.user-card button {
+  display: flex;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: gray;
+  align-items: center;
+  justify-content: flex-start;
+}

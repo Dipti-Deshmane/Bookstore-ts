@@ -13,7 +13,6 @@ import book7 from './../Assets/book7.jpg';
 interface BookCardProps {
     book: Book;
 }
-
 const bookImageMapping: { [key: string]: string } = {
     "The 5 AM Club": book2,
     "The India Story": book3,

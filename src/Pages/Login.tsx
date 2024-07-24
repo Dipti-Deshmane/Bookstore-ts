@@ -1,10 +1,10 @@
-import {useState,ChangeEvent, FormEvent} from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import "../Style/login.scss";
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import { useNavigate } from 'react-router-dom'; 
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import { useNavigate } from "react-router-dom";
 import baseURL from "../API/baseURL";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 import axios from "axios";
 
 interface LoginData {
@@ -13,75 +13,85 @@ interface LoginData {
 }
 
 function Login() {
-  const [loginData,setLoginData] = useState<LoginData>({
+  const [loginData, setLoginData] = useState<LoginData>({
     email: "",
-    password: ""
-})
+    password: "",
+  });
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
-    const handleShowPassword = () => {
-        setShowPassword(!showPassword);
-    };
+  const handleShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
-      const { name , value} = e.target;
-      setLoginData({...loginData, [name]:value});
-  }
+  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    const { name, value } = e.target;
+    setLoginData({ ...loginData, [name]: value });
+  };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     try {
-      const response = await axios.post(`${baseURL}/bookstore_user/login`, loginData);
+      const response = await axios.post(
+        `${baseURL}/bookstore_user/login`,
+        loginData
+      );
       if (response.status === 200) {
-        localStorage.setItem('token', response.data.result.accessToken);
+        localStorage.setItem("token", response.data.result.accessToken);
         // localStorage.setItem('fullName', response.data.fullName);
-        toast.success("User logged Successfully!", { position: 'top-center' })
-        navigate('/home');
+        toast.success("User logged Successfully!", { position: "top-center" });
+        navigate("/home");
       }
     } catch (error) {
-      console.error('Login failed:', error);
-      toast.error('Invalid Credentials. Please try again later', { position: 'top-center' });
+      console.error("Login failed:", error);
+      toast.error("Invalid Credentials. Please try again later", {
+        position: "top-center",
+      });
     }
   };
 
-  return ( <form className="auth-form" onSubmit={handleSubmit}>
-    <label>Email Id</label>
-    <input type="email" name="email" value={loginData.email} onChange={handleChange}/>
-    <label>Password</label>
-    <div className="password-container">
-              <input
-                  type={showPassword ? 'text' : 'password'}
-                  placeholder="Enter your password"
-                  name="password"
-        value={loginData.password}
+  return (
+    <form className="auth-form" onSubmit={handleSubmit}>
+      <label>Email Id</label>
+      <input
+        type="email"
+        name="email"
+        value={loginData.email}
         onChange={handleChange}
-              />
-              <button
-                  type="button"
-                  className="password-toggle"
-                  onClick={handleShowPassword}
-              >
-                  {showPassword ? <VisibilityOffIcon /> : <Visibility />}
-              </button>
-          </div>
-    <div className="forgot-password">
-      <a href="#">Forgot Password?</a>
-    </div>
-    <button type="submit" className="login">
-      Login
-    </button>
-    <div className="alternative-login">
-      <span>OR</span>
-      <div className="options">
-        <button className="left-button">Facebook</button>
-        <button className="right-button">Google</button>
+      />
+      <label>Password</label>
+      <div className="password-container">
+        <input
+          type={showPassword ? "text" : "password"}
+          placeholder="Enter your password"
+          name="password"
+          value={loginData.password}
+          onChange={handleChange}
+        />
+        <button
+          type="button"
+          className="password-toggle"
+          onClick={handleShowPassword}
+        >
+          {showPassword ? <VisibilityOffIcon /> : <Visibility />}
+        </button>
       </div>
-    </div>
-  </form>
-);
+      <div className="forgot-password">
+        <a href="#">Forgot Password?</a>
+      </div>
+      <button type="submit" className="login">
+        Login
+      </button>
+      <div className="alternative-login">
+        <span>OR</span>
+        <div className="options">
+          <button className="left-button">Facebook</button>
+          <button className="right-button">Google</button>
+        </div>
+      </div>
+    </form>
+  );
 }
-
 
 export default Login;

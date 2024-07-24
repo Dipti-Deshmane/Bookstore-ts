@@ -1,69 +1,67 @@
-
 .register-form {
-    width: 80%;
+  width: 80%;
 
-    label {
-        display: block;
-        margin-bottom: 3px;
-        font-size: small;
-    }
+  label {
+    display: block;
+    margin-bottom: 3px;
+    font-size: small;
+  }
 
-    input {
-        width: 100%;
-        height: 15px;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-    }
+  input {
+    width: 100%;
+    height: 15px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
 
-    .password-container {
-        display: flex;
-        align-items: center;
-        position: relative;
-        z-index: 0;
-        width: 100%; 
-    }
-    
-    .password-container input {
-        flex: 1;
-        width: calc(100% - 40px);
-        width: 188px;
-    }
-    
-    
-    .password-toggle {
-        position: absolute;
-        right: 0;
-        top: 38%;
-        transform: translateY(-50%);
-        border: none;
-        background: transparent;
-        cursor: pointer;
-        padding: 0 0.5rem;
-        color: #555;
-        z-index: 2;
-    }
+  .password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+  }
 
-    .register {
-        width: 107%;
-        height: 41px;
-        padding: 10px;
-        background-color: #d32f2f;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 20px;
-    }
+  .password-container input {
+    flex: 1;
+    width: calc(100% - 40px);
+    width: 188px;
+  }
+
+  .password-toggle {
+    position: absolute;
+    right: 0;
+    top: 38%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0 0.5rem;
+    color: #555;
+    z-index: 2;
+  }
+
+  .register {
+    width: 107%;
+    height: 41px;
+    padding: 10px;
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .register-form{
-        width: 92%;
-    }
-    .pages {
-        margin-bottom: 10px;
-    }
+  .register-form {
+    width: 92%;
+  }
+  .pages {
+    margin-bottom: 10px;
+  }
 }

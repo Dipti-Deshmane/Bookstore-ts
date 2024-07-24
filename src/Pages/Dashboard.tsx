@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import '../Style/dashboard.scss';
+import "../Style/dashboard.scss";
 import BookService, { Book } from "../Services/BookService";
 import BookCard from "../Components/BookCard";
 import Footer from "../Components/Footer";
@@ -16,9 +16,7 @@ function Dashboard() {
 
   const fetchBooks = async () => {
     const response = await BookService.getBooks(token);
-    const data: Book[] = Array.isArray(response.result)
-      ? response.result
-      : [];
+    const data: Book[] = Array.isArray(response.result) ? response.result : [];
     setBooks(data);
   };
 
@@ -33,24 +31,29 @@ function Dashboard() {
   return (
     <div className="dashboard-body">
       <header className="book">
-        <h6>Books <span>({books.length} items)</span></h6>
+        <h6>
+          Books <span>({books.length} items)</span>
+        </h6>
       </header>
       <div className="above-dashboard">
         <div className="dashboard-container">
-          {currentBooks.map(book => (
+          {currentBooks.map((book) => (
             <BookCard key={book._id} book={book} />
           ))}
         </div>
         <div className="pagination">
-          {Array.from({ length: Math.ceil(books.length / booksPerPage) }, (_, i) => (
-            <button
-              key={i + 1}
-              onClick={() => paginate(i + 1)}
-              className={`page-item ${currentPage === i + 1 ? 'active' : ''}`}
-            >
-              {i + 1}
-            </button>
-          ))}
+          {Array.from(
+            { length: Math.ceil(books.length / booksPerPage) },
+            (_, i) => (
+              <button
+                key={i + 1}
+                onClick={() => paginate(i + 1)}
+                className={`page-item ${currentPage === i + 1 ? "active" : ""}`}
+              >
+                {i + 1}
+              </button>
+            )
+          )}
         </div>
       </div>
       <Footer />

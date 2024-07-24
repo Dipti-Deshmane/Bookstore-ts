@@ -8,12 +8,11 @@
     margin-bottom: 1%;
     padding-top: 3%;
     padding-left: 15%;
-    
-   }
-   a:-webkit-any-link {
+  }
+  a:-webkit-any-link {
     text-decoration: none;
     color: #777;
-   }
+  }
 
   .content {
     display: flex;
@@ -29,7 +28,6 @@
         width: 50px;
         height: 75px;
         border: 1px solid gray;
-     
       }
     }
 
@@ -89,7 +87,7 @@
           height: 40px;
 
           &::before {
-            content: '❤';
+            content: "❤";
             font-size: 18px;
           }
         }
@@ -199,7 +197,7 @@
         }
 
         .review-container {
-          background-color: #F8F8F8;
+          background-color: #f8f8f8;
           color: #555;
           padding-left: 4%;
           padding-right: 4%;
@@ -214,7 +212,7 @@
             border-radius: 4px;
             width: 95%;
             font-size: medium;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: "Times New Roman", Times, serif;
           }
 
           button {
@@ -229,28 +227,26 @@
             align-self: flex-end;
           }
         }
-        
       }
-      .spacer{
+      .spacer {
         height: 20%;
       }
     }
   }
-  
 }
 
-.review{
+.review {
   margin-top: 4%;
 }
 
-.review2{
+.review2 {
   margin-top: 5%;
 }
 .starIconss {
   font-size: x-large;
   color: rgb(199, 187, 187);
 }
-.reviewcomment{
+.reviewcomment {
   font-size: small;
   color: gray;
 }

@@ -1,26 +1,26 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
-  .breadcrumb {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 1%;
-    padding-top: 3%;
-    padding-left: 13%;
-    
-   }
-      a:-webkit-any-link {
-    text-decoration: none;
-    color: #777;
-   }
+.breadcrumb {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 1%;
+  padding-top: 3%;
+  padding-left: 13%;
+}
+a:-webkit-any-link {
+  text-decoration: none;
+  color: #777;
+}
 
 .cart-container {
-    overflow-y: auto;
-    height: 100vh;
+  overflow-y: auto;
+  height: 100vh;
   .cart-details {
     max-width: 733px;
     margin: 0 auto;
@@ -64,7 +64,6 @@ html, body {
     .cart-item {
       display: flex;
       align-items: center;
-    
 
       img {
         padding: 3%;
@@ -99,7 +98,6 @@ html, body {
             }
           }
         }
-
 
         .quantity {
           display: flex;
@@ -162,7 +160,7 @@ html, body {
           transition: max-height 0.3s ease, padding 0.3s ease;
 
           &.open {
-            max-height: 500px; 
+            max-height: 500px;
             padding: 10px;
           }
         }
@@ -179,7 +177,8 @@ html, body {
         margin-bottom: 5px;
       }
 
-      input, textarea {
+      input,
+      textarea {
         padding: 10px;
         margin-bottom: 10px;
         border: 1px solid #ddd;
@@ -188,7 +187,6 @@ html, body {
 
       .type-options {
         display: flex;
-        
 
         input {
           margin-right: 5px;
@@ -209,7 +207,7 @@ html, body {
         border: none;
         cursor: pointer;
         text-align: center;
-      margin-left: 84%;
+        margin-left: 84%;
       }
     }
 
@@ -247,11 +245,10 @@ html, body {
           }
         }
       }
-
     }
   }
 }
-.spacer{
+.spacer {
   height: 10%;
 }
 
@@ -265,5 +262,5 @@ html, body {
   border: none;
   cursor: pointer;
   text-align: center;
-margin-left:  84%;
+  margin-left: 84%;
 }

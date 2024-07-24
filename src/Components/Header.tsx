@@ -17,24 +17,22 @@ const Header = () => {
   };
 
   const handleCartClick = () => {
-    navigate('/cart'); 
+    navigate("/cart");
   };
 
   const handleHomeClick = () => {
-    navigate('/home'); 
+    navigate("/home");
   };
 
   const handleWishlistClick = () => {
-    navigate('/wishlist'); 
+    navigate("/wishlist");
   };
-
 
   const handleLogout = async () => {
-        localStorage.removeItem("token");
-        navigate("/");
-        console.log("Logout successful");
+    localStorage.removeItem("token");
+    navigate("/");
+    console.log("Logout successful");
   };
-
 
   return (
     <header className="header">
@@ -47,11 +45,9 @@ const Header = () => {
             className="logo"
             onClick={handleHomeClick}
           />
-  
         </div>
         <div className="search-container">
           <input type="text" placeholder="Search..." className="search-input" />
-       
         </div>
 
         <div className="icons">
@@ -81,9 +77,11 @@ const Header = () => {
                   <FavoriteBorderOutlinedIcon fontSize="small" />{" "}
                   <span style={{ marginLeft: "2%" }}>My Wishlist</span>
                 </button>
-                <button className="logoutbtn"  onClick={handleLogout}> Logout</button>
+                <button className="logoutbtn" onClick={handleLogout}>
+                  {" "}
+                  Logout
+                </button>
               </div>
-
             </div>
           )}
           <div className="addCart">

@@ -32,7 +32,7 @@ function BookDetails() {
 
   return (
     <div className="book-details">
-        <div className="breadcrumb">
+      <div className="breadcrumb">
         <Link to="/home">Home</Link> / Book(01)
       </div>
       <div className="content">
@@ -113,7 +113,7 @@ function BookDetails() {
               <p className="reviewcomment">
                 Stephen Chbosky’s coming-of-age novel offers a poignant
                 exploration of identity, mental health, and acceptance. Through
-                the eyes of the protagonist, Charlie, 
+                the eyes of the protagonist, Charlie,
               </p>
             </div>
 

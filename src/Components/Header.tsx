@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import booklogo from "./../Assets/book.png";
+import logo from "./../Assets/logo (1).png";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import "./../Style/header.scss";
@@ -9,25 +10,48 @@ import { BadgeOutlined } from "@mui/icons-material";
 
 const Header = () => {
   const [showUserCard, setShowUserCard] = useState(false);
+  const navigate = useNavigate();
 
   const toggleUserCard = () => {
     setShowUserCard((prevState) => !prevState);
   };
+
+  const handleCartClick = () => {
+    navigate('/cart'); 
+  };
+
+  const handleHomeClick = () => {
+    navigate('/home'); 
+  };
+
+  const handleWishlistClick = () => {
+    navigate('/wishlist'); 
+  };
+
+
+  const handleLogout = async () => {
+        localStorage.removeItem("token");
+        navigate("/");
+        console.log("Logout successful");
+  };
+
 
   return (
     <header className="header">
       <div className="headercontainer">
         <div className="logo-container">
           <img
-            src={booklogo}
+            src={logo}
             style={{ backgroundColor: "red" }}
             alt="bookLogo"
             className="logo"
+            onClick={handleHomeClick}
           />
-          <h1 className="logoText">BookStore</h1>
+  
         </div>
         <div className="search-container">
           <input type="text" placeholder="Search..." className="search-input" />
+       
         </div>
 
         <div className="icons">
@@ -57,13 +81,14 @@ const Header = () => {
                   <FavoriteBorderOutlinedIcon fontSize="small" />{" "}
                   <span style={{ marginLeft: "2%" }}>My Wishlist</span>
                 </button>
-                <button className="logoutbtn"> Logout</button>
+                <button className="logoutbtn"  onClick={handleLogout}> Logout</button>
               </div>
 
             </div>
           )}
           <div className="addCart">
             <ShoppingCartOutlinedIcon
+              onClick={handleCartClick}
               className="cart"
               style={{ cursor: "pointer", color: "white" }}
               fontSize="medium"

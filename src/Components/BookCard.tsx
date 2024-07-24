@@ -1,26 +1,66 @@
-import bookImg from './../Assets/bookImg.jpg';
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./../Style/bookCard.scss";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import StarIcon from '@mui/icons-material/Star';
+import { Book } from './../Services/BookService';
+import book1 from './../Assets/book1.jpg';
+import book2 from './../Assets/book2.jpg';
+import book3 from './../Assets/book3.jpg';
+import book4 from './../Assets/book4.jpg';
+import book5 from './../Assets/book5.png';
+import book6 from './../Assets/book6.jpg';
+import book7 from './../Assets/book7.jpg';
 
-const BookCard = () => {
+interface BookCardProps {
+    book: Book;
+}
+
+const bookImageMapping: { [key: string]: string } = {
+    "The 5 AM Club": book2,
+    "The India Story": book3,
+    "Fear Not Strong": book4,
+    "The lord of the Rings": book5,
+    "Iron Man: Extremis": book2,
+    "Spider Man": book6,
+    "Group Discussion": book1,
+    "The Hobbit 2": book7,
+    "The Hobbit 9": book2,
+    "The Hobbit 78": book3,
+    "The Hobbit 56": book4,
+    "Unbranded Cotton Hat": book5,
+    "Unbranded Concrete Table": book2,
+    "Generic Wooden Chair": book6,
+    "Refined Wooden Cheese": book1,
+    "Incredible Plastic Table": book7,
+    "Just Things By Nilesh": book4,
+    "ghfghfg": book6
+};
+
+function BookCard({ book }: BookCardProps) {
+    const navigate = useNavigate();
+
+    const handleCardClick = () => {
+        const bookImage = bookImageMapping[book.bookName] || 'book-cover.jpg';
+        navigate(`/details/${book._id}`, { state: { book, bookImage } });
+    };
+
+    const bookImage = bookImageMapping[book.bookName] || 'book-cover.jpg';
+
     return (
-        <div className="bookCard">
+        <div className="bookCard" onClick={handleCardClick}>
             <div className="imgSection">
-                <img src={bookImg} alt="Book Cover" />
+                <img src={bookImage} alt="Book Cover" />
             </div>
             <div className='bookInformation'>
-            <div className='bookName'>Don't Make Me Think</div>
-            <div className='bookAuthor'>by Steve Krug</div>
-            <div className='bookRate'>
-            <div className='bookRating'>4.5   <FontAwesomeIcon icon={faStar} className="starIcon" /></div>
-            <div className='bookCount'>(20)</div>
-            </div>
-            <div className='bookPrice'>
-                <div className='offerPrice'>Rs.1500</div>
-                <div className='originalPrice'>Rs.2000</div>
-            </div>
+                <div className='bookName'>{book.bookName}</div>
+                <div className='bookAuthor'>by {book.author}</div>
+                <div className='bookRate'>
+                    <div className='bookRating'>4.5 <StarIcon className="starIcon" /></div>
+                    <div className='bookCount'>(20)</div>
+                </div>
+                <div className='bookPrice'>
+                    <span className='offerPrice'>Rs.{book.discountPrice}</span>
+                    <span className='originalPrice'>Rs.{book.price}</span>
+                </div>
             </div>
         </div>
     );

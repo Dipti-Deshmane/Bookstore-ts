@@ -1,0 +1,64 @@
+html, body {
+  height: auto; /* Change fixed height to auto */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Maintain this to help push footer to the bottom */
+}
+
+.book {
+  margin-left: 13%;
+}
+
+h6 {
+  font-size: 26px;
+  margin: 0;
+  font-weight: 500;
+
+  span {
+    font-size: 12px;
+    color: #888;
+  }
+}
+
+.above-dashboard {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: calc(100vh - 100px); /* Adjust height to consider header/footer height */
+  overflow-y: auto; /* Enable vertical scroll if content exceeds max height */
+}
+
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1%;
+  box-sizing: border-box;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  .page-item {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .page-item.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+}

@@ -5,7 +5,7 @@
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
-    margin: 10px;
+    margin: 20px;
 }
 .imgSection{
     display: flex;
@@ -15,7 +15,7 @@
     padding: 8%;
 }
 .starIcon {
-    font-size: smaller;
+    font-size: smaller !important;
     margin-left: 4%;
     margin-top: 2%;
 }
@@ -37,7 +37,7 @@
     flex-direction: column;    
     align-items: flex-start;
     padding-left: 9%;
-    padding-top: 5%;
+   
 }
 
 .bookAuthor {
@@ -60,7 +60,7 @@
 .bookPrice {
     display: flex;
     justify-content: space-between;
-    padding-bottom:6% ;
+    padding-bottom:3% ;
     align-items: center;
 }
 

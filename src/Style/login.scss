@@ -132,15 +132,14 @@
 }
 
 @media (min-width: 321px) and (max-width: 380px) {
-  .auth-page-container .auth-page-form {
-    width: 65%;
-  }
+
   .auth-form {
     width: 96%;
   }
   .auth-form .alternative-login span {
     margin-bottom: 12px;
   }
+
 }
 
 @media (max-width: 320px) {

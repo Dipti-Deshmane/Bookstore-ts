@@ -86,3 +86,25 @@
 .bookRate {
   display: flex;
 }
+
+
+
+@media (min-width: 376px) and (max-width: 425px) {
+    .bookCard {
+        width: 38%;
+    }
+  }
+  
+  @media (min-width: 321px) and (max-width: 375px) {
+    .bookCard {
+        width: 37%;
+    }
+   
+  
+  }
+  
+  @media (max-width: 320px) {
+    .bookCard {
+        width: 63%;
+    }
+  }

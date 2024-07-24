@@ -136,6 +136,7 @@ function Cart() {
                                         <span>by {item.product_id.author}</span>
                                         <p className="price">Rs. {item.product_id.discountPrice} <span className="original-price">Rs. {item.product_id.price}</span></p>
                                     </div>
+                                    <div className='spacer'></div>
                                 </div>
                             ))}
                             <button className="checkout">CHECKOUT</button>
@@ -143,7 +144,9 @@ function Cart() {
                     </div>
                 </div>
             </div>
-            <div className='spacer'></div>
+          
+
+          
         </div>
     );
 }
